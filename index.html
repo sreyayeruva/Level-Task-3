@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS Temperature converter | DevProjects</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Simple Temperature Converter</h1>
+      <p>
+        Made by Sreya, 2023. See
+        <a href="https://github.com/sreyayeruva">this project on GitHub</a>
+      </p>
+    </header>
+    <main>
+      <div class="card">
+        <p>
+          Select your target temperature, and input your initial temperature.
+        </p>
+        <form>
+          <div class="input-container">
+            <label for="inputTempSelect">Convert from</label>
+            <select name="" id="inputTempSelect" autofocus>
+              <option value="F">Fahrenheit</option>
+              <option value="C" selected>Celcius</option>
+              <option value="K">Kelvin</option>
+            </select>
+
+            <div class="temp-input-container">
+              <input type="number" name="temp" id="tempInput" />
+            </div>
+          </div>
+
+          <div class="output-container">
+            <label for="targetTempSelect">Convert to</label>
+            <select name="tempSelect" id="targetTempSelect">
+              <option value="F" selected>Fahrenheit</option>
+              <option value="C">Celcius</option>
+              <option value="K">Kelvin</option>
+            </select>
+
+            <output name="result" for="tempInput" class="result" title="result">
+              0
+            </output>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

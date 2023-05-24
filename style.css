@@ -1,0 +1,111 @@
+:root {
+  color-scheme: light dark;
+  --dark-grey: #24242a;
+  --dark-grey-hover: #2a2a31;
+  --accent: #2753b4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  all: unset;
+  box-sizing: border-box;
+  display: block;
+  padding: 1rem;
+}
+
+button:hover {
+  user-select: none;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translateY(5px);
+}
+
+header {
+  padding: 2rem;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  outline: 1px solid var(--dark-grey);
+  padding: 2rem;
+  max-width: 75ch;
+}
+
+.card + .card {
+  margin-top: 1rem;
+}
+
+.card form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card form > * {
+  flex: 1 1 20ch;
+}
+
+label {
+  padding-block: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+input,
+label {
+  display: block;
+  line-height: 1rem;
+  width: 100%;
+}
+
+select,
+input,
+.result {
+  background: var(--dark-grey);
+  border: none;
+  padding: 1rem;
+}
+
+select:hover,
+input:hover {
+  background: var(--dark-grey-hover);
+}
+
+select {
+  padding-block: 0.5rem;
+  cursor: pointer;
+}
+
+input,
+.result {
+  border-bottom: 5px solid var(--accent);
+  padding: 1rem;
+  line-height: 1rem;
+}
+
+.result {
+  display: block;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --dark-grey: #eee;
+    --dark-grey-hover: #dedede;
+  }
+}
